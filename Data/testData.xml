@@ -1,0 +1,46 @@
+<AML>
+  <Item type="Method" action="add" id="45C5652580834969BB5A8F3776C193D9">
+    <id keyed_name="test_csharp_false" type="Method">45C5652580834969BB5A8F3776C193D9</id>
+    <method_code>Debugger.Break();</method_code>
+    <method_location is_null="1"/>
+    <method_type>C#</method_type>
+    <name>test_csharp_false</name>
+  </Item>
+  <Item type="Method" action="add" id="DE9B425A42124CD2BB734441D657CCA0">
+    <id keyed_name="test_csharp_false2" type="Method">DE9B425A42124CD2BB734441D657CCA0</id>
+    <method_code>//System.Diagnostics.Debugger.Break(); /*System.Diagnostics.Debugger.Break();*/ /* System.Diagnostics.Debugger.Break(); */</method_code>
+    <method_location is_null="1"/>
+    <method_type>C#</method_type>
+    <name>test_csharp_false2</name>
+  </Item>
+  <Item type="Method" action="add" id="BA0B84B17FC24D28AB93E9AC7B58E278">
+    <id keyed_name="test_csharp_true" type="Method">BA0B84B17FC24D28AB93E9AC7B58E278</id>
+    <method_code>System.Diagnostics.Debugger.Break();</method_code>
+    <method_location is_null="1"/>
+    <method_type>C#</method_type>
+    <name>test_csharp_true</name>
+  </Item>
+  <Item type="Method" action="add" id="ECE9D33D4BA54F6CA851A71EE9CC6C65">
+    <id keyed_name="test_vb_false" type="Method">ECE9D33D4BA54F6CA851A71EE9CC6C65</id>
+    <method_code>Debugger.Break();</method_code>
+    <method_location is_null="1"/>
+    <method_type>VB</method_type>
+    <name>test_vb_false</name>
+  </Item>
+  <Item type="Method" action="add" id="5E2C437D6DBB47A7A64AFC96AB26BB8D">
+    <id keyed_name="test_vb_false2" type="Method">5E2C437D6DBB47A7A64AFC96AB26BB8D</id>
+    <method_code>''System.Diagnostics.Debugger.Break(); 'System.Diagnostics.Debugger.Break();
+    </method_code>
+    <method_location is_null="1"/>
+    <method_type>VB</method_type>
+    <name>test_vb_false2</name>
+  </Item>
+  <Item type="Method" action="add" id="D1C8C408F6BF4A68868277D07583E826">
+    <id keyed_name="test_vb_true" type="Method">D1C8C408F6BF4A68868277D07583E826</id>
+    <method_code>' comment
+      System.Diagnostics.Debugger.Break();</method_code>
+    <method_location is_null="1"/>
+    <method_type>VB</method_type>
+    <name>test_vb_true</name>
+  </Item>
+</AML>
