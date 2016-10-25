@@ -41,6 +41,7 @@ Internet Explorer 11, Firefox 38 ESR, Chrome
 7. Select Type = **Merge** and Mode = **Thorough Mode**.
 8. Click **Import** in the top left corner.
 9. Close the Aras Package Import tool.
+10. (Optional) Execute the contents of [Data\TestData.xml](./Data/TestData.xml) in Nash or AML Studio to add sample data to your database for testing.
 
 You are now ready to login to Aras and try out the Find Active Debuggers action.
 
