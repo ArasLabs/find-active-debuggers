@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="7CAC9B156CFA4AC496B119B01803DCC6" action="add">
+  <item_query />
+  <label xml:lang="en">Find Active Debuggers</label>
+  <location>server</location>
+  <method keyed_name="labs_FindActiveDebuggers" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>labs_FindActiveDebuggers</name>
+   </Item>
+  </method>
+  <target>one window</target>
+  <type>generic</type>
+  <name>labs_FindActiveDebuggers</name>
+ </Item>
+</AML>

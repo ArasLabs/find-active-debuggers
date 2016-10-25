@@ -1,0 +1,46 @@
+﻿<AML>
+ <Item type="Method" id="8AD9B2B3E7C048838BF26A6D2FF1F4F7" action="add">
+  <comments>Finds active server debuggers</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Aras Labs
+// Original Code - Michael Ghizzoni for Aras Support
+// Finds active server debuggers
+//
+// Eli Donahue - 10/25/16
+// Updated formatting
+
+System.Text.RegularExpressions.Regex regExStr = new System.Text.RegularExpressions.Regex("(^System\\.Diagnostics\\.Debugger\\.Break()|\n[^/'\"]*System\\.Diagnostics\\.Debugger\\.Break())");
+string res = "";
+string criteria = "";
+
+Innovator inn = this.getInnovator();
+string myAML = @"<AML>
+<Item type='Method' action='get' select='method_code,name,method_location'>
+<is_current>1</is_current>
+<OR><method_type>C#</method_type>
+<method_type>VB</method_type></OR>
+</Item></AML>";
+Item methods = inn.applyAML(myAML);
+
+int i,j=0;
+for(i=0; i<methods.getItemCount();i++)
+{
+  Item currMethod = methods.getItemByIndex(i);
+  if(regExStr.IsMatch(currMethod.getProperty("method_code","")))
+  {
+    res += ("<li>"+currMethod.getProperty("name","")+"</li>");
+    criteria += (currMethod.getProperty("name","")+"|");
+    j++;
+  }
+}
+
+criteria = criteria.Substring(0,criteria.Length-1);
+
+return inn.newResult("<h1>Results</h1><h3>Found " + 
+        j + " occurrences of System.Diagnostics.Debugger.Break():</h3><ul>" + 
+        res + "</ul><h3>Search Criteria:</h3><em>" + 
+        criteria + "</em>");]]></method_code>
+  <method_type>C#</method_type>
+  <name>labs_FindActiveDebuggers</name>
+ </Item>
+</AML>

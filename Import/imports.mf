@@ -1,0 +1,3 @@
+<imports>
+  <package name="aras.labs.FindActiveDebuggers" path="FindActiveDebuggers\Import" />
+</imports>
