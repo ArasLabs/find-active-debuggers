@@ -2,20 +2,19 @@
 
 This package adds a method and action to locate active debuggers in Aras Method items.
 
-## Project Details
+## History
 
-See [TESTSTATUS file](./TESTSTATUS.md) for latest testing information.
+Release | Notes
+--------|--------
+[v2.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v2.0) | Adds support for JavaScript methods.
+[v1.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v1.0) | First release. only supports server-side methods. Though built and tested using Aras 11.0 SP7, this project may function in older releases of Aras 11.0 and Aras 10.0.
 
-#### Built Using:
-Aras 11.0 SP7
+#### Supported Aras Versions
 
-#### Versions Tested:
-Aras 11.0 SP7, Aras 11.0 SP5 (open release)
-
-#### Browsers Tested:
-Internet Explorer 11, Firefox 38 ESR, Chrome
-
-> Though built and tested using Aras 11.0 SP7, this project should function in older releases of Aras 11.0 and Aras 10.0.
+Project | Aras
+--------|------
+[v2.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v2.0) | 11.0 SP5, 11.0 SP7, 11.0 SP9
+[v1.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v1.0) | 11.0 SP5, 11.0 SP7
 
 ## Installation
 
@@ -33,9 +32,9 @@ Internet Explorer 11, Firefox 38 ESR, Chrome
 1. Backup your database and store the BAK file in a safe place.
 2. Open up the Aras Package Import tool.
 3. Enter your login credentials and click **Login**
-  * _Note: You must login as root for the package import to succeed!_
+    * _Note: You must login as root for the package import to succeed!_
 4. Enter the package name in the TargetRelease field.
-  * Optional: Enter a description in the Description field.
+    * Optional: Enter a description in the Description field.
 5. Enter the path to your local `..\FindActiveDebuggers\Import\imports.mf` file in the Manifest File field.
 6. Select **FindActiveDebuggers** in the Available for Import field.
 7. Select Type = **Merge** and Mode = **Thorough Mode**.
@@ -67,6 +66,9 @@ For more information on contributing to this project, another Aras Labs project,
 Original code written by Mike Ghizzoni for Aras Corporation Support.
 
 Documented and published by Eli Donahue for Aras Labs. @EliJDonahue
+
+Contributors:
+* @mptap
 
 ## License
 
