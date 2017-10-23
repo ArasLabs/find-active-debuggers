@@ -18,7 +18,8 @@ string myAML = @"<AML>
 <Item type='Method' action='get' select='method_code,name,method_location'>
 <is_current>1</is_current>
 <OR><method_type>C#</method_type>
-<method_type>VB</method_type></OR>
+<method_type>VB</method_type>
+<method_type>JS</method_type></OR>
 </Item></AML>";
 Item methods = inn.applyAML(myAML);
 
@@ -36,9 +37,9 @@ for(i=0; i<methods.getItemCount();i++)
 
 criteria = criteria.Substring(0,criteria.Length-1);
 
-return inn.newResult("<h1>Results</h1><h3>Found " + 
-        j + " occurrences of System.Diagnostics.Debugger.Break():</h3><ul>" + 
-        res + "</ul><h3>Search Criteria:</h3><em>" + 
+return inn.newResult("<h1>Results</h1><h3>Found " +
+        j + " occurrences of System.Diagnostics.Debugger.Break():</h3><ul>" +
+        res + "</ul><h3>Search Criteria:</h3><em>" +
         criteria + "</em>");]]></method_code>
   <method_type>C#</method_type>
   <name>labs_FindActiveDebuggers</name>
