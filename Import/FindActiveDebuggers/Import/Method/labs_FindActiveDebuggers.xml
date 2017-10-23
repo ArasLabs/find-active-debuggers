@@ -8,14 +8,20 @@
 //
 // Eli Donahue - 10/25/16
 // Updated formatting
+//
+// Eli Donahue & Manjiri Tapaswi
+// Added JS support
 
 System.Text.RegularExpressions.Regex regExStr = new System.Text.RegularExpressions.Regex("(^System\\.Diagnostics\\.Debugger\\.Break()|\n[^/'\"]*System\\.Diagnostics\\.Debugger\\.Break())");
+System.Text.RegularExpressions.Regex regExStrJS = new System.Text.RegularExpressions.Regex("(^debugger|[^/\\*]\n\\s*[^/'\"\\s]*debugger)");
 string res = "";
+string js_res = "";
 string criteria = "";
+string js_methods = "";
 
 Innovator inn = this.getInnovator();
 string myAML = @"<AML>
-<Item type='Method' action='get' select='method_code,name,method_location'>
+<Item type='Method' action='get' select='method_code,name,method_location,method_type'>
 <is_current>1</is_current>
 <OR><method_type>C#</method_type>
 <method_type>VB</method_type>
@@ -23,24 +29,51 @@ string myAML = @"<AML>
 </Item></AML>";
 Item methods = inn.applyAML(myAML);
 
-int i,j=0;
-for(i=0; i<methods.getItemCount();i++)
+int js_matched = 0;
+int svr_matched = 0;
+int js_total = 0;
+int svr_total = 0;
+for(int i=0; i<methods.getItemCount();i++)
 {
-  Item currMethod = methods.getItemByIndex(i);
-  if(regExStr.IsMatch(currMethod.getProperty("method_code","")))
-  {
-    res += ("<li>"+currMethod.getProperty("name","")+"</li>");
-    criteria += (currMethod.getProperty("name","")+"|");
-    j++;
-  }
+    Item currMethod = methods.getItemByIndex(i);
+    if (currMethod.getProperty("method_type","") == "JavaScript")
+    {
+        // use javascript regex to check methods
+        if(regExStrJS.IsMatch(currMethod.getProperty("method_code","")))
+        {
+            js_res += ("<li>"+currMethod.getProperty("name","")+"</li>");
+            js_methods += (currMethod.getProperty("name","")+"|");
+            js_matched++;
+        }
+        js_total++;
+    }
+    else
+    {
+        if(regExStr.IsMatch(currMethod.getProperty("method_code","")))
+        {
+            res += ("<li>"+currMethod.getProperty("name","")+"</li>");
+            criteria += (currMethod.getProperty("name","")+"|");
+            svr_matched++;
+        }
+        svr_total++;
+    }
 }
 
 criteria = criteria.Substring(0,criteria.Length-1);
 
-return inn.newResult("<h1>Results</h1><h3>Found " +
-        j + " occurrences of System.Diagnostics.Debugger.Break():</h3><ul>" +
+string res_string = "<h1>Results</h1><h3>Found " +
+        svr_matched + " occurrence(s) of System.Diagnostics.Debugger.Break():</h3><ul>" +
         res + "</ul><h3>Search Criteria:</h3><em>" +
-        criteria + "</em>");]]></method_code>
+        criteria + "</em><br/><h4>Checked " + 
+        svr_total + " methods</h4><hr/>";
+        
+res_string += "<h3>Found " +
+        js_matched + " occurrence(s) of 'debugger':</h3><ul>" +
+        js_res + "</ul><h3>Search Criteria:</h3><em>" +
+        js_methods + "</em><br/><h4>Checked " + 
+        js_total + " methods</h4><hr/>";
+
+return inn.newResult(res_string);]]></method_code>
   <method_type>C#</method_type>
   <name>labs_FindActiveDebuggers</name>
  </Item>
