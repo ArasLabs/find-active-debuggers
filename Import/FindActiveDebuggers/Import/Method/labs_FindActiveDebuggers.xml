@@ -19,7 +19,7 @@ string myAML = @"<AML>
 <is_current>1</is_current>
 <OR><method_type>C#</method_type>
 <method_type>VB</method_type>
-<method_type>JS</method_type></OR>
+<method_type>JavaScript</method_type></OR>
 </Item></AML>";
 Item methods = inn.applyAML(myAML);
 
