@@ -11,9 +11,16 @@
 //
 // Eli Donahue & Manjiri Tapaswi
 // Added JS support
+// 
+// Chris Gillis - 10/19/18
+// Updated to limit chance of false positive
 
 System.Text.RegularExpressions.Regex regExStr = new System.Text.RegularExpressions.Regex("(^System\\.Diagnostics\\.Debugger\\.Break()|\n[^/'\"]*System\\.Diagnostics\\.Debugger\\.Break())");
-System.Text.RegularExpressions.Regex regExStrJS = new System.Text.RegularExpressions.Regex("(^debugger|[^/\\*]\n\\s*[^/'\"\\s]*debugger)");
+System.Text.RegularExpressions.Regex regExStrJS = new System.Text.RegularExpressions.Regex("((^|( |\\t))*debugger(\\s|$|;))");
+System.Text.RegularExpressions.Regex regExStrQuotes = new System.Text.RegularExpressions.Regex("(\"(.| |\\t)*?\")");
+System.Text.RegularExpressions.Regex regExStrLiteralQuotes = new System.Text.RegularExpressions.Regex("(@\"(.|\\s)*?\")");
+System.Text.RegularExpressions.Regex regExStrMlComments = new System.Text.RegularExpressions.Regex("(/\\*((.|\\n)*?)\\*/)");
+System.Text.RegularExpressions.Regex regExStrSlComments = new System.Text.RegularExpressions.Regex("(//(.| |\\t)*(\\n|$))");
 string res = "";
 string js_res = "";
 string criteria = "";
@@ -36,10 +43,23 @@ int svr_total = 0;
 for(int i=0; i<methods.getItemCount();i++)
 {
     Item currMethod = methods.getItemByIndex(i);
+    
+    /* Strip out all non-code sections to avoid false positives:
+     *  Quoted strings: "test";
+     *  String literals: @"test";
+     *  Comments: // test
+     *  Multiline comments: Like this one
+     */
+    string currMethodCode = currMethod.getProperty("method_code", "");
+    currMethodCode = regExStrQuotes.Replace(currMethodCode, "");
+    currMethodCode = regExStrLiteralQuotes.Replace(currMethodCode, "");
+    currMethodCode = regExStrMlComments.Replace(currMethodCode, "");
+    currMethodCode = regExStrSlComments.Replace(currMethodCode, "");
+
     if (currMethod.getProperty("method_type","") == "JavaScript")
     {
         // use javascript regex to check methods
-        if(regExStrJS.IsMatch(currMethod.getProperty("method_code","")))
+        if(regExStrJS.IsMatch(currMethodCode))
         {
             js_res += ("<li>"+currMethod.getProperty("name","")+"</li>");
             js_methods += (currMethod.getProperty("name","")+"|");
@@ -49,7 +69,7 @@ for(int i=0; i<methods.getItemCount();i++)
     }
     else
     {
-        if(regExStr.IsMatch(currMethod.getProperty("method_code","")))
+        if(regExStr.IsMatch(currMethodCode))
         {
             res += ("<li>"+currMethod.getProperty("name","")+"</li>");
             criteria += (currMethod.getProperty("name","")+"|");

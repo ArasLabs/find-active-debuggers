@@ -6,6 +6,7 @@ This package adds a method and action to locate active debuggers in Aras Method 
 
 Release | Notes
 --------|--------
+[v3.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v3.0) | Adds additional checks to limit false positives
 [v2.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v2.0) | Adds support for JavaScript methods.
 [v1.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v1.0) | First release. only supports server-side methods. Though built and tested using Aras 11.0 SP7, this project may function in older releases of Aras 11.0 and Aras 10.0.
 
@@ -13,6 +14,7 @@ Release | Notes
 
 Project | Aras
 --------|------
+[v3.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v3.0) | 11.0 SP5, 11.0 SP7, 11.0 SP9, 11.0 SP12
 [v2.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v2.0) | 11.0 SP5, 11.0 SP7, 11.0 SP9
 [v1.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v1.0) | 11.0 SP5, 11.0 SP7
 
@@ -69,6 +71,7 @@ Documented and published by Eli Donahue for Aras Labs. @EliJDonahue
 
 Contributors:
 * @mptap
+* @cgillis-aras
 
 ## License
 

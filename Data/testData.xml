@@ -43,4 +43,135 @@
     <method_type>VB</method_type>
     <name>test_vb_true</name>
   </Item>
+  <Item type="Method" action="add" id="0423D8C551F141BA9A533D9C79ECDF55">
+    <id keyed_name="test_js_false" type="Method">0423D8C551F141BA9A533D9C79ECDF55</id>
+    <keyed_name>test_js_false</keyed_name>
+    <method_code>// debugger;</method_code>
+    <method_location is_null =" 1" />
+    <method_type>JavaScript</method_type>
+    <name>test_js_false</name>
+  </Item>
+  <Item type="Method" action="add" id="21981B387A9E4A8189245C771D63FD6E">
+      <id keyed_name="test_js2_false" type="Method">21981B387A9E4A8189245C771D63FD6E</id>
+      <keyed_name>test_js2_false</keyed_name>
+      <method_code>//debugger;</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js2_false</name>
+  </Item>
+  <Item type="Method" action="add" id="F2C8F57278134A0A841E18DB52BB5749">
+      <id keyed_name="test_js3_true" type="Method">F2C8F57278134A0A841E18DB52BB5749</id>
+      <keyed_name>test_js3_true</keyed_name>
+      <method_code>if (true) debugger;</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js3_true</name>
+  </Item>
+  <Item type="Method" action="add" id="3F00001958A4446CBDB6D8DE71C0DDD1">
+      <id keyed_name="test_js4_false" type="Method">3F00001958A4446CBDB6D8DE71C0DDD1</id>
+      <keyed_name>test_js4_false</keyed_name>
+      <method_code>/* debugger; */</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js4_false</name>
+  </Item>
+  <Item type="Method" action="add" id="8FD6E688B144405694CAA3819D7681F6">
+      <id keyed_name="test_js5_false" type="Method">8FD6E688B144405694CAA3819D7681F6</id>
+      <keyed_name>test_js5_false</keyed_name>
+      <method_code>var test =" debugger;";</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js5_false</name>
+  </Item>
+  <Item type="Method" action="add" id="095A42EF40F14FDA9A34FAB0E4CA739D">
+      <id keyed_name="test_js6_false" type="Method">095A42EF40F14FDA9A34FAB0E4CA739D</id>
+      <keyed_name>test_js6_false</keyed_name>
+      <method_code>/* test debugger; */</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js6_false</name>
+  </Item>
+  <Item type="Method" action="add" id="24298C044D224F0CA8B1F6769BFC8993">
+      <id keyed_name="test_js7_false" type="Method">24298C044D224F0CA8B1F6769BFC8993</id>
+      <keyed_name>test_js7_false</keyed_name>
+      <method_code>/* debugger */</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js7_false</name>
+  </Item>
+  <Item type="Method" action="add" id="187EE24E7E4A49DAAFB0433C3E6F6AAD">
+      <id keyed_name="test_js8_false" type="Method">187EE24E7E4A49DAAFB0433C3E6F6AAD</id>
+      <keyed_name>test_js8_false</keyed_name>
+      <method_code>/* * debugger;*/</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js8_false</name>
+  </Item>
+  <Item type="Method" action="add" id="21037A9AD24D4900BBCA6BBC0CFF8566">
+      <id keyed_name="test_js9_false" type="Method">21037A9AD24D4900BBCA6BBC0CFF8566</id>
+      <keyed_name>test_js9_false</keyed_name>
+      <method_code>/* debugger */</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js9_false</name>
+  </Item>
+  <Item type="Method" action="add" id="5307AF8FB89C46FA9480D501DDF4A528">
+      <id keyed_name="test_js10_false" type="Method">5307AF8FB89C46FA9480D501DDF4A528</id>
+      <keyed_name>test_js10_false</keyed_name>
+      <method_code>/* *debugger */</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js10_false</name>
+  </Item>
+  <Item type="Method" action="add" id="1C733FA1ED654208B22D70DA53F7F574">
+      <id keyed_name="test_js11_false" type="Method">1C733FA1ED654208B22D70DA53F7F574</id>
+      <keyed_name>test_js11_false</keyed_name>
+      <method_code>// if (true) debugger;</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js11_false</name>
+  </Item>
+  <Item type="Method" action="add" id="134AEC9DFA1F41619321741B87FD57AB">
+      <id keyed_name="test_js12_false" type="Method">134AEC9DFA1F41619321741B87FD57AB</id>
+      <keyed_name>test_js12_false</keyed_name>
+      <method_code>var debuggerTest = 1;</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js12_false</name>
+  </Item>
+  <Item type="Method" action="add" id="001A4BBC0F694E718A02C7F475C65E4F">
+      <id keyed_name="test_js_true" type="Method">001A4BBC0F694E718A02C7F475C65E4F</id>
+      <keyed_name>test_js_true</keyed_name>
+      <method_code>debugger;</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js_true</name>
+  </Item>
+  <Item type="Method" action="add" id="556E775C4160499CA9677A28F6A012F1">
+      <id keyed_name="test_js2_true" type="Method">556E775C4160499CA9677A28F6A012F1</id>
+      <keyed_name>test_js2_true</keyed_name>
+      <method_code> debugger;</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js2_true</name>
+  </Item>
+  <Item type="Method" action="add" id="22118E674B4643C99A13B864552FCF40">
+      <id keyed_name="test_js3_false" type="Method">22118E674B4643C99A13B864552FCF40</id>
+      <keyed_name>test_js3_false</keyed_name>
+      <method_code>// debugger;</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js3_false</name>
+  </Item>
+  <Item type="Method" action="add" id="5D7EAC93F2644BB9A7742A9E9599E6B7">
+      <id keyed_name="test_js4_true" type="Method">5D7EAC93F2644BB9A7742A9E9599E6B7</id>
+      <keyed_name>test_js4_true</keyed_name>
+      <method_code>/* * debugger; */ 
+      // debugger; 
+      /* debugger; */ 
+      debugger;</method_code>
+      <method_location is_null =" 1" />
+      <method_type>JavaScript</method_type>
+      <name>test_js4_true</name>
+  </Item>
 </AML>
