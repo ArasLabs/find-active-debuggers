@@ -6,6 +6,7 @@ This package adds a method and action to locate active debuggers in Aras Method 
 
 Release | Notes
 --------|--------
+[v3.0.1](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v3.0.1) | Updated Usage for v12 
 [v3.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v3.0) | Adds additional checks to limit false positives
 [v2.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v2.0) | Adds support for JavaScript methods.
 [v1.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v1.0) | First release. only supports server-side methods. Though built and tested using Aras 11.0 SP7, this project may function in older releases of Aras 11.0 and Aras 10.0.
@@ -14,6 +15,7 @@ Release | Notes
 
 Project | Aras
 --------|------
+[v3.0.1](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v3.0.1) | 11.0 SP5+, 12.0+ 
 [v3.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v3.0) | 11.0 SP5, 11.0 SP7, 11.0 SP9, 11.0 SP12
 [v2.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v2.0) | 11.0 SP5, 11.0 SP7, 11.0 SP9
 [v1.0](https://github.com/ArasLabs/find-active-debuggers/releases/tag/v1.0) | 11.0 SP5, 11.0 SP7
@@ -25,7 +27,7 @@ Project | Aras
 
 ### Pre-requisites
 
-1. Aras Innovator installed (version 11.0 SPx preferred)
+1. Aras Innovator installed (see "Supported Aras Versions" above)
 2. Aras Package Import tool
 3. FindActiveDebuggers import package
 
@@ -49,7 +51,8 @@ You are now ready to login to Aras and try out the Find Active Debuggers action.
 ## Usage
 
 1. Log in to Aras as admin.
-2. Click **Actions > Find Active Debuggers** in the main menu.
+2. Click user menu (upper right corner) **Actions > Find Active Debuggers**.
+   1. Click **Actions > Find Active Debuggers** in the main menu.
 
 The Find Active Debuggers action will display a window with the results of the report. The window will show a list of methods containing an active debugger statement and a search criteria string that you can copy into the Method main grid search toolbar.
 
